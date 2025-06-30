@@ -19,6 +19,7 @@
 
 ## 📁 디렉토리 구조
 
+```
 root/
 ├── kotlin_legacy/         ← 기존 MQTT 앱 3종 (Kotlin)
 │   ├── broker/
@@ -35,7 +36,7 @@ root/
 │
 ├── README.md
 └── settings.gradle (optional, if multi-module)
-
+```
 
 ---
 
