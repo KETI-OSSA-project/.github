@@ -1,163 +1,176 @@
-# Azena Messaging Ecosystem
+# Azena Messaging Ecosystem – MQTT Service
 
 **개요**
-
 본 프로젝트는 **Azena 플랫폼 기반 메시징 생태계**를 구축하기 위해 개발된 프레임워크입니다.
-내부 메시징 모듈(Publisher, Subscriber, Broker)과 Gateway를 완성하여, 내부 생태계와 외부 MQTT Broker(Mosquitto) 간의 메시지 라우팅 및 연동을 지원합니다.
+내부 메시징 모듈(Publisher, Subscriber, Broker)과 Gateway를 통해, **내부 브로커와 외부 MQTT Broker(Mosquitto)** 간의 메시지 발행/구독을 지원합니다.
 
 ---
 
-## Azena Messaging System
+## 시스템 아키텍처
 
-* **내부 Publisher/Subscriber** : 내부 브로커를 통해 메시지를 발행·수신
-* **내부 Broker** : 내부 생태계의 중심 허브, 구독/발행 관리 및 메시지 라우팅
-* **Gateway** : 내부 Broker ↔ 외부 MQTT Broker 간 메시지 변환 및 중계
-* **MQTT Broker (Mosquitto)** : 외부 Pub/Sub 클라이언트와 통신
-
----
-
-## 기술 스택
-
-* **언어** : Java (내부 Publisher/Subscriber/Broker, Gateway)
-* **프로토콜** : MQTT (Mosquitto 기반)
-* **플랫폼** : Azena Ecosystem
-* **환경** : Android/Linux 기반 내부 브로커 + 외부 MQTT 연동
+* **내부 Publisher/Subscriber** : 내부 브로커를 통한 메시지 발행·수신
+* **내부 Broker** : 내부 메시징 허브, 구독/발행 관리
+* **Gateway** : 내부 Broker ↔ 외부 MQTT Broker 중계 (uplink/downlink 토픽 패턴 기반)
+* **외부 MQTT Broker (Mosquitto)** : 외부 Pub/Sub 클라이언트와 통신
 
 ---
 
-## 디렉토리 구조
+## 실행 환경 준비
 
-```
-Azena-Messaging/
-├─ broker_java/        # 내부 Broker (메시지 라우팅 및 구독/발행 관리)
-├─ publisher_java/     # Publisher (메시지 발행 클라이언트)
-├─ subscriber_java/    # Subscriber (메시지 구독 클라이언트)
-├─ gateway/            # Gateway (내부 Broker ↔ 외부 MQTT Broker 중계)
-└─ README.md
-```
+### 1. 개발 환경
+
+* **Android Studio Koala (2024.1.1 Patch 1)**
+* Android 버전 **12 이하 (SDK/API Level ≤ 32)**
+
+  * 참고: [Android API Levels](https://apilevels.com/)
+* **라즈베리파이 (안드로이드 OS)** + 공유기 연결
+
+  * SSID: `iptime5G_ketitest`
+  * PW: `ketiketi`
+
+### 2. 보조 도구
+
+* **scrcpy** (안드로이드 미러링 도구, 필요 시 설치)
+
+  * 참고: [설치 가이드](https://goharry.tistory.com/39)
+
+### 3. 외부 MQTT Broker
+
+* **Mosquitto** 실행 파일(`mosquitto.exe`) 또는 패키지 설치
+* 세부 설치 방법은 \[외부 MQTT 브로커 설치 가이드 문서] 참조
 
 ---
 
-## 설치 및 실행 가이드
+## MQTT 서비스 실행 가이드
 
-### \[1] 필수 환경
+### 1. 네트워크 연결 확인
 
-* **Java 11+**
-* **Gradle** (wrapper 포함)
-* **Mosquitto (MQTT Broker)**
-* Linux/Android 환경 권장
-
----
-
-### \[2] 레포지토리 클론
+* 공유기 연결 확인
+* 디바이스 연결:
 
 ```bash
-git clone <repository_url>
-cd Azena-Messaging
+adb connect 192.168.0.8
+```
+
+### 2. 미러링 실행
+
+```bash
+scrcpy -s 192.168.0.8:5555
 ```
 
 ---
 
-### \[3] 내부 메시징 모듈 빌드 및 실행
+### 3. 내부 Broker 실행
 
-#### Broker 실행
-
-```bash
-cd broker_java
-./gradlew build
-./gradlew run
-```
-
-#### Publisher 실행
-
-```bash
-cd publisher_java
-./gradlew build
-./gradlew run
-```
-
-#### Subscriber 실행
-
-```bash
-cd subscriber_java
-./gradlew build
-./gradlew run
-```
+Broker 모듈 실행 → 브로커 화면 출력 확인
 
 ---
 
-### \[4] Mosquitto 설치 및 실행
+### 4. Subscriber / Publisher 실행
 
-#### Ubuntu 설치
+각 모듈 실행 후 메시지 발행/구독 테스트 가능
 
-```bash
-sudo apt update
-sudo apt install mosquitto mosquitto-clients
-sudo systemctl enable mosquitto
-sudo systemctl start mosquitto
-```
+#### 분할 화면 설정 (Android)
 
-#### 실행 확인
-
-```bash
-mosquitto_sub -t "test/topic" -v
-mosquitto_pub -t "test/topic" -m "Hello MQTT"
-```
+* 탭 바에서 네모 버튼 클릭
+* 하단 `분할 화면` 선택 → Sub / Pub 화면 동시 실행
 
 ---
 
-### \[5] Gateway 설정 및 실행
-
-Gateway는 내부 Broker와 외부 MQTT Broker를 중계합니다.
-환경 설정 파일(`gateway/config.json`)에서 브로커 주소를 지정하세요.
-
-예시:
-
-```json
-{
-  "internalBroker": "tcp://localhost:1883",
-  "externalBroker": "tcp://mqtt.eclipse.org:1883"
-}
-```
-
-실행:
+### 5. 외부 MQTT Broker 실행
 
 ```bash
-cd gateway
-./gradlew build
-./gradlew run
+mosquitto -v
 ```
+
+로그 출력으로 브로커 실행 상태 확인 가능
 
 ---
 
-### \[6] 전체 실행 흐름 예시
+### 6. Gateway 실행 및 설정
 
-1. 내부 Publisher → 내부 Broker로 메시지 발행
+게이트웨이는 내부 ↔ 외부 브로커 간 메시지 라우팅을 수행합니다.
 
-   ```bash
-   메시지 발행: {"topic": "azena/test", "payload": "Hello Azena!"}
-   ```
-2. 내부 Subscriber → 메시지 수신
-3. Gateway → 내부 Broker 메시지를 MQTT Broker로 전달
-4. 외부 MQTT Subscriber → Mosquitto를 통해 메시지 수신
+**설정 항목**
+
+* **외부 브로커 URL** : 연결할 MQTT Broker 주소
+* **Uplink 토픽 패턴** : 내부 → 외부 메시지 발행 허용 규칙
+* **Downlink 토픽 패턴** : 외부 → 내부 메시지 수신 허용 규칙
+
+> 설정 변경 후 반드시 **저장 및 시작 버튼**을 눌러야 Gateway 서비스가 정상 동작합니다.
+
+---
+
+## MQTT 실행 상세 가이드
+
+### 구독하기 (Subscribe)
+
+1. 토픽 입력 후 `구독하기` 버튼 클릭
+2. "구독 완료" 메시지 확인
+
+### 구독 해제 (Unsubscribe)
+
+1. 구독 해제 버튼 클릭
+2. "구독 해제 완료" 메시지 확인
+
+---
+
+### 내부 메시지 발행/수신
+
+1. 토픽 및 메시지 입력 후 `Publish` 버튼 클릭
+2. 메시지 발행 및 수신 확인
+
+**동작 규칙**
+
+* 구독 이전에 발행된 메시지는 수신되지 않음
+* 구독하지 않은(또는 해제된) 토픽의 메시지는 수신되지 않음
+* 동일 토픽 중복 구독 시 메시지는 1회만 수신됨
+* 발행 시점 이전부터 구독 중인 토픽은 자동으로 수신됨
+
+---
+
+### 외부 메시지 발행 (Uplink)
+
+1. 외부 MQTT Broker 실행
+2. Gateway 실행 후 **Uplink 토픽 규칙**에 맞춰 Publisher 토픽 설정
+3. 메시지 발행 → 외부 MQTT Broker Subscriber에서 수신
+
+**주의사항**
+
+* 토픽이 Uplink 규칙과 다르면 메시지 발행되지 않음
+* Gateway의 Uplink/Downlink 패턴은 자유롭게 변경 가능 (단, 동일하면 안 됨)
+* 외부 MQTT Broker 로그 → 발행된 토픽과 payload 크기 확인 가능
+
+---
+
+### 외부 메시지 수신 (Downlink)
+
+1. Gateway에서 **Downlink 토픽 규칙**에 맞게 Subscriber 토픽 설정
+2. 외부 MQTT Publisher에서 메시지 발행
+3. 내부 Subscriber에서 메시지 수신 확인
+
+**주의사항**
+
+* 토픽이 Downlink 규칙과 다르면 메시지가 내부로 전달되지 않음
+* 내부 Subscriber는 외부 MQTT 발행 메시지의 **토픽 및 payload 내용** 확인 가능
 
 ---
 
 ## 개발 현황
 
-* [x] **Broker** 모듈 (메시지 라우팅 및 구독/발행 관리)
-* [x] **Publisher / Subscriber** 모듈
+* [x] 내부 **Broker** 모듈
+* [x] 내부 **Publisher/Subscriber** 모듈
 * [x] **Gateway** 모듈
-* [x] Mosquitto 기반 **외부 MQTT Broker 연동** 검증 완료
+* [x] Mosquitto 기반 **외부 MQTT 연동** 검증 완료
 
 ---
 
 ## 향후 계획
 
-* QoS 및 Payload 옵션 확장
-* TLS/인증 기반 보안 기능 강화
-* 대규모 트래픽 환경에서의 성능 최적화
-* Azena 플랫폼 SDK와의 API 통합
+* QoS 옵션 및 Payload 처리 고도화
+* TLS/인증 기반 보안 통신 적용
+* 대규모 트래픽 처리 최적화
+* Azena 플랫폼 SDK와 API 통합
 
 ---
 
