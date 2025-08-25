@@ -26,9 +26,6 @@
   * 참고: [Android API Levels](https://apilevels.com/)
 * **라즈베리파이 (안드로이드 OS)** + 공유기 연결
 
-  * SSID: `iptime5G_ketitest`
-  * PW: `ketiketi`
-
 ### 2. 보조 도구
 
 * **scrcpy** (안드로이드 미러링 도구, 필요 시 설치)
