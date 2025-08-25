@@ -1,18 +1,33 @@
 # KETI(한국전자기술연구원) 정보미디어연구센터
 
+# Azena Messaging Ecosystem
 
-## Message API - Java 리팩토링 프로젝트
+## 📌 프로젝트 개요
 
-본 프로젝트는 기존 MQTT 기반의 Kotlin 구현 코드를 Java로 리팩토링하고,  
-공식 API 명세를 기반으로 표준화된 메시지 API 시스템을 구축하기 위한 작업입니다.
+본 프로젝트는 **자체 Azena 생태계**를 기반으로 메시징 인프라(Publisher, Subscriber, Broker, Gateway)를 완성하여,
+내부 브로커와 외부 MQTT 브로커 간 메시지 중계 시스템을 제공하는 것을 목표로 합니다.
+
+아래 그림은 전체 메시지 흐름을 나타낸 구조입니다.
+
+![서비스 흐름도](./그림6.png)
 
 ---
 
-## 🔧 프로젝트 목적
+## 🎯 프로젝트 목표
 
-- 기존의 Kotlin 기반 MQTT 앱(브로커, 퍼블리셔, 서브스크라이버)을 Java로 단계적으로 이관
-- 공식 문서에 정의된 message API와 최대한 호환되는 형태로 코드 리디자인
-- 시스템 간 연동 시 **사용성과 직관성을 높이는 API 구조 확보**
+* **내부 메시징 시스템 구축**
+
+  * 내부 Publisher/Subscriber와 Broker 간의 안정적인 메시징 처리
+* **게이트웨이 연동**
+
+  * 내부 메시지를 MQTT Broker(Mosquitto)와 연결하는 메시지 중계 역할 수행
+* **외부 MQTT 통신 지원**
+
+  * Uplink/Downlink 메시지 라우팅
+  * 외부 MQTT Pub/Sub과의 통신 지원
+* **표준화된 API 제공**
+
+  * Messaging API 기반의 직관적이고 확장성 있는 인터페이스
 
 ---
 
@@ -20,46 +35,54 @@
 
 ```
 root/
-├── kotlin_legacy/         ← 기존 MQTT 앱 3종 (Kotlin)
-│   ├── broker/
-│   ├── publisher/
-│   └── subscriber/
-│
-├── java_refactor/         ← 새롭게 개발할 Java 코드
-│   ├── broker/            ← 브로커 중심부터 시작
-│   ├── publisher/
-│   └── subscriber/
-│
-├── api_docs/              ← 공식 API pdf 또는 정리 자료
-│   └── api_mapping.md
-│
-├── README.md
-└── settings.gradle (optional, if multi-module)
+├── broker_java/        ← 내부 Broker (메시지 라우팅 및 구독/발행 관리)
+├── publisher_java/     ← Publisher (메시지 발행 클라이언트)
+├── subscriber_java/    ← Subscriber (메시지 구독 클라이언트)
+├── gateway/            ← Gateway (내부 Broker ↔ 외부 MQTT Broker 중계)
+└── README.md
 ```
 
 ---
 
-## ✅ 개발 우선순위
+## ⚙️ 서비스 구성 요소
 
-1. **브로커 모듈(Java)** 개발
-    - MQTT 메시지 수신, topic 관리, 클라이언트 등록
-    - 공식 API 기준에 맞춘 인터페이스 구성
+1. **내부 Publisher / Subscriber**
 
-2. **퍼블리셔(Publisher) 모듈(Java)**
-    - 메시지 전송 API(`sendMessage()`) 호출
-    - QoS, payload, correlation 설정 등 적용
+   * 내부 브로커를 통해 메시지 발행 및 수신
+   * 구독/해제 관리 지원
 
-3. **서브스크라이버(Subscriber) 모듈(Java)**
-    - 구독 요청, 메시지 수신 API 구성
+2. **내부 Broker**
+
+   * 내부 메시징 허브 역할 수행
+   * Publisher/Subscriber 간 메시지 라우팅
+
+3. **Gateway**
+
+   * 내부 Broker와 외부 MQTT Broker 간 메시지 변환 및 중계
+   * uplink/downlink 처리
+
+4. **MQTT Broker**
+
+   * Mosquitto 기반 외부 브로커
+   * 외부 Pub/Sub 클라이언트와 연동
 
 ---
 
+## 🚀 개발 현황
 
-## 📌 기타 참고 사항
-
-- 현재는 **자바로의 변환 및 필수 API 10개를 선별**하여 우선 구현 중입니다.
-- 브로커 기능이 먼저 구현된 후, 퍼블리셔/서브스크라이버 순으로 연동 예정입니다.
-- 본 프로젝트는 내부 시스템 연동 및 테스트 목적으로 구성되며, 확장성 있는 구조를 목표로 합니다.
+* [x] 내부 **Broker** 모듈 완성
+* [x] 내부 **Publisher / Subscriber** 모듈 완성
+* [x] **Gateway** 모듈 완성
+* [x] 외부 MQTT Broker(Mosquitto)와 연동 검증 완료
 
 ---
+
+## 🔮 향후 계획
+
+* QoS 및 payload 옵션 확장
+* 보안 기능(TLS, 인증) 추가
+* 대규모 트래픽 시뮬레이션 및 성능 최적화
+* Azena 플랫폼 기반 **서비스 레벨 API 패키징**
+
+
 
