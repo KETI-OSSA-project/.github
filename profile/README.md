@@ -1,6 +1,7 @@
 # Azena Messaging Ecosystem – MQTT Service
 
 **개요**
+
 본 프로젝트는 **Azena 플랫폼 기반 메시징 생태계**를 구축하기 위해 개발된 프레임워크입니다.
 내부 메시징 모듈(Publisher, Subscriber, Broker)과 Gateway를 통해, **내부 브로커와 외부 MQTT Broker(Mosquitto)** 간의 메시지 발행/구독을 지원합니다.
 
