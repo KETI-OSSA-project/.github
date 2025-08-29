@@ -7,6 +7,10 @@
 
 ---
 
+<p align="center">
+<img src = "https://github.com/user-attachments/assets/5fda5904-9d37-4324-8dae-87ddd36bc08a">
+</p>
+
 ## 시스템 아키텍처
 
 * **내부 Publisher/Subscriber** : 내부 브로커를 통한 메시지 발행·수신
