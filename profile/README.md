@@ -7,8 +7,9 @@
 
 ---
 
+## 내부 ↔ 내부 통신
 <p align="center">
-<img src = "https://github.com/user-attachments/assets/5fda5904-9d37-4324-8dae-87ddd36bc08a">
+  <img src="https://github.com/user-attachments/assets/5fda5904-9d37-4324-8dae-87ddd36bc08a" width="60%" />
 </p>
 
 ## 시스템 아키텍처
