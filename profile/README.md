@@ -14,9 +14,9 @@
 
 ### 내부 ↔ 외부 통신
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/3372b3b6-22df-4a4c-b832-d55950039a4c" width="20%" />
-  <img src="https://github.com/user-attachments/assets/e029e60a-968f-4e0d-9743-4cc5d612e071" width="20%" />
-  <img src="https://github.com/user-attachments/assets/54b9caf3-78f7-4b9b-8a2e-e2fee6d20800" width="20%" />
+  <img src="https://github.com/user-attachments/assets/3372b3b6-22df-4a4c-b832-d55950039a4c" width="30%" />
+  <img src="https://github.com/user-attachments/assets/e029e60a-968f-4e0d-9743-4cc5d612e071" width="30%" />
+  <img src="https://github.com/user-attachments/assets/54b9caf3-78f7-4b9b-8a2e-e2fee6d20800" width="30%" />
 </p>
 
 ## 시스템 아키텍처
