@@ -54,30 +54,13 @@
 
 ## MQTT 서비스 실행 가이드
 
-### 1. 네트워크 연결 확인
-
-* 공유기 연결 확인
-* 디바이스 연결:
-
-```bash
-adb connect 192.168.0.8
-```
-
-### 2. 미러링 실행
-
-```bash
-scrcpy -s 192.168.0.8:5555
-```
-
----
-
-### 3. 내부 Broker 실행
+### 1. 내부 Broker 실행
 
 Broker 모듈 실행 → 브로커 화면 출력 확인
 
 ---
 
-### 4. Subscriber / Publisher 실행
+### 2. Subscriber / Publisher 실행
 
 각 모듈 실행 후 메시지 발행/구독 테스트 가능
 
@@ -88,7 +71,7 @@ Broker 모듈 실행 → 브로커 화면 출력 확인
 
 ---
 
-### 5. 외부 MQTT Broker 실행
+### 3. 외부 MQTT Broker 실행
 
 ```bash
 mosquitto -v
@@ -98,7 +81,7 @@ mosquitto -v
 
 ---
 
-### 6. Gateway 실행 및 설정
+### 4. Gateway 실행 및 설정
 
 게이트웨이는 내부 ↔ 외부 브로커 간 메시지 라우팅을 수행합니다.
 
@@ -164,15 +147,6 @@ mosquitto -v
 
 * 토픽이 Downlink 규칙과 다르면 메시지가 내부로 전달되지 않음
 * 내부 Subscriber는 외부 MQTT 발행 메시지의 **토픽 및 payload 내용** 확인 가능
-
----
-
-## 개발 현황
-
-* [x] 내부 **Broker** 모듈
-* [x] 내부 **Publisher/Subscriber** 모듈
-* [x] **Gateway** 모듈
-* [x] Mosquitto 기반 **외부 MQTT 연동** 검증 완료
 
 ---
 
