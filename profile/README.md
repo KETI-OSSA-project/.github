@@ -38,7 +38,6 @@
 - 보조 도구: [scrcpy](https://goharry.tistory.com/39) (안드로이드 화면 미러링)  
 
 ---
-markdown
 
 1. **내부 Broker 실행**
    
