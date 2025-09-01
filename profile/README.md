@@ -1,11 +1,13 @@
 # Azena Messaging Ecosystem – MQTT Service
 
-**개요**
-
-본 프로젝트는 **Azena 플랫폼 기반 메시징 생태계**를 구축하기 위해 개발된 프레임워크입니다.
-내부 메시징 모듈(Publisher, Subscriber, Broker)과 Gateway를 통해, **내부 브로커와 외부 MQTT Broker(Mosquitto)** 간의 메시지 발행/구독을 지원합니다.
-
+### Highlights
+- **내부 ↔ 외부 MQTT 브로커 연동** (Mosquitto 지원)  
+- **안드로이드 기반 독립 실행형 메시징 허브** (Broker, Publisher, Subscriber 포함)  
+- **Gateway를 통한 uplink/downlink 토픽 패턴 관리**  
+- **라즈베리파이 + 안드로이드 환경에서 검증 완료**  
 ---
+
+## Architecture
 
 ### 내부 ↔ 내부 통신
 <p align="center">
@@ -20,116 +22,47 @@
 </tr>
 </table>
 
-## 시스템 아키텍처
-
-* **내부 Publisher/Subscriber** : 내부 브로커를 통한 메시지 발행·수신
-* **내부 Broker** : 내부 메시징 허브, 구독/발행 관리
-* **Gateway** : 내부 Broker ↔ 외부 MQTT Broker 중계 (uplink/downlink 토픽 패턴 기반)
-* **외부 MQTT Broker (Mosquitto)** : 외부 Pub/Sub 클라이언트와 통신
-
+- **내부 Publisher/Subscriber** : 내부 브로커를 통한 메시지 발행·수신  
+- **내부 Broker** : 내부 메시징 허브, 구독/발행 관리  
+- **Gateway** : 내부 Broker ↔ 외부 MQTT Broker 중계 (uplink/downlink 토픽 기반)  
+- **외부 MQTT Broker (Mosquitto)** : 외부 Pub/Sub 클라이언트와 통신  
 ---
 
-## 실행 환경 준비
+## Getting Started
 
-### 1. 개발 환경
-
-* **Android Studio Koala (2024.1.1 Patch 1)**
-* Android 버전 **12 이하 (SDK/API Level ≤ 32)**
-
-  * 참고: [Android API Levels](https://apilevels.com/)
-* **라즈베리파이 (안드로이드 OS)** + 공유기 연결
-
-### 2. 보조 도구
-
-* **scrcpy** (안드로이드 미러링 도구, 필요 시 설치)
-
-  * 참고: [설치 가이드](https://goharry.tistory.com/39)
-
-### 3. 외부 MQTT Broker
-
-* **Mosquitto** 실행 파일(`mosquitto.exe`) 또는 패키지 설치
-* 세부 설치 방법은 \[외부 MQTT 브로커 설치 가이드 문서] 참조
+### Setup
+개발 환경 준비:
+- **Android Studio Koala (2024.1.1 Patch 1)**  
+- Android 버전 **12 이하 (SDK/API Level ≤ 32)**  
+- **라즈베리파이 (Android OS)** + 공유기 연결  
+- 보조 도구: [scrcpy](https://goharry.tistory.com/39) (안드로이드 화면 미러링)  
 
 ---
+markdown
 
-## MQTT 서비스 실행 가이드
-
-### 1. 내부 Broker 실행
-
-Broker 모듈 실행 → 브로커 화면 출력 확인
-
----
-
-### 2. Subscriber / Publisher 실행
-
-각 모듈 실행 후 메시지 발행/구독 테스트 가능
-
-#### 분할 화면 설정 (Android)
-
-* 탭 바에서 네모 버튼 클릭
-* 하단 `분할 화면` 선택 → Sub / Pub 화면 동시 실행
-
----
-
-### 3. 외부 MQTT Broker 실행
-
-```bash
-mosquitto -v
-```
-
-로그 출력으로 브로커 실행 상태 확인 가능
-
----
-
-### 4. Gateway 실행 및 설정
-
-게이트웨이는 내부 ↔ 외부 브로커 간 메시지 라우팅을 수행합니다.
-
-**설정 항목**
-
-* **외부 브로커 URL** : 연결할 MQTT Broker 주소
-* **Uplink 토픽 패턴** : 내부 → 외부 메시지 발행 허용 규칙
-* **Downlink 토픽 패턴** : 외부 → 내부 메시지 수신 허용 규칙
-
-> 설정 변경 후 반드시 **저장 및 시작 버튼**을 눌러야 Gateway 서비스가 정상 동작합니다.
-
----
-
-## MQTT 실행 상세 가이드
-
-### 구독하기 (Subscribe)
-
-1. 토픽 입력 후 `구독하기` 버튼 클릭
-2. "구독 완료" 메시지 확인
-
-### 구독 해제 (Unsubscribe)
-
-1. 구독 해제 버튼 클릭
-2. "구독 해제 완료" 메시지 확인
-
----
-
-### 내부 메시지 발행/수신
-
-1. 토픽 및 메시지 입력 후 `Publish` 버튼 클릭
-2. 메시지 발행 및 수신 확인
-
----
-
-### 외부 메시지 발행 (Uplink)
-
-1. 외부 MQTT Broker 실행
-2. Gateway 실행 후 **Uplink 토픽 규칙**에 맞춰 Publisher 토픽 설정
-3. 메시지 발행 → 외부 MQTT Broker Subscriber에서 수신
+1. **내부 Broker 실행**
    
----
+   ```bash
+   ./broker_start.sh
+   ```
 
-### 외부 메시지 수신 (Downlink)
+3. **Publisher 실행**
 
-1. Gateway에서 **Downlink 토픽 규칙**에 맞게 Subscriber 토픽 설정
-2. 외부 MQTT Publisher에서 메시지 발행
-3. 내부 Subscriber에서 메시지 수신 확인
+   ```bash
+   ./publisher_start.sh --topic test/topic --message "hello world"
+   ```
 
+4. **Subscriber 실행**
+
+   ```bash
+   ./subscriber_start.sh --topic test/topic
+   ```
+
+5. **Gateway 실행 (내부 ↔ 외부 브로커 연동)**
+
+   ```bash
+   ./gateway_start.sh --uplink "uplink/#" --downlink "downlink/#"
+   ```
 
 ---
 
