@@ -10,14 +10,14 @@
 <div align="center">
 
   <!-- 윗줄: Android 관련 2개 -->
-  <img src="https://img.shields.io/badge/Android_Studio-Koala_(2024.1.1_Patch_1)-3DDC84?logo=androidstudio&logoColor=white" />
+  <img src="https://img.shields.io/badge/Android_Studio-Koala-3DDC84?logo=androidstudio&logoColor=white" />
   <img src="https://img.shields.io/badge/Android-12_(API_32)-3DDC84?logo=android&logoColor=white" />
 
   <br>
   <!-- 아랫줄: 나머지 3개 -->
-  <img src="https://img.shields.io/badge/Raspberry_Pi-Device-A22846?logo=raspberrypi&logoColor=white" />
+  <img src="https://img.shields.io/badge/Raspberry_Pi-Android_OS-A22846?logo=raspberrypi&logoColor=white" />
   <img src="https://img.shields.io/badge/Java-11-007396?logo=openjdk&logoColor=white" />
-  <img src="https://img.shields.io/badge/MQTT-Eclipse_Paho_v1.2.5-2C2255?logo=eclipseide&logoColor=white" />
+  <img src="https://img.shields.io/badge/MQTT-v1.2.5-2C2255?logo=eclipseide&logoColor=white" />
 
 </div>
 
