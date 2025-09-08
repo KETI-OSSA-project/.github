@@ -29,15 +29,8 @@
 <img src="https://img.shields.io/badge/Build-Gradle-02303A?style=for-the-badge&logo=gradle&logoColor=white" />
 <img src="https://img.shields.io/badge/Plugin-android.application-3DDC84?style=for-the-badge&logo=android&logoColor=white" />
 
-<!-- Features -->
-<img src="https://img.shields.io/badge/Feature-Data_Binding-2962FF?style=for-the-badge" />
-<img src="https://img.shields.io/badge/Feature-AIDL_enabled-2962FF?style=for-the-badge" />
-
 <!-- MQTT (Eclipse Paho) -->
 <img src="https://img.shields.io/badge/MQTT-Eclipse_Paho_v1.2.5-2C2255?style=for-the-badge&logo=eclipseide&logoColor=white" />
-
-<!-- AndroidX (선택적으로 표시) -->
-<img src="https://img.shields.io/badge/AndroidX-AppCompat%20%7C%20Material%20%7C%20Activity%20%7C%20ConstraintLayout-4285F4?style=for-the-badge&logo=android&logoColor=white" />
 
 </p>
 
