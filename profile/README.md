@@ -23,11 +23,7 @@
 <img src="https://img.shields.io/badge/minSdk-24-3DDC84?style=for-the-badge&logo=android&logoColor=white" />
 
 <!-- Java version -->
-<img src="https://img.shields.io/badge/Java-11-007396?style=for-the-badge&logo=java&logoColor=white" />
-
-<!-- Gradle / Android Gradle Plugin -->
-<img src="https://img.shields.io/badge/Build-Gradle-02303A?style=for-the-badge&logo=gradle&logoColor=white" />
-<img src="https://img.shields.io/badge/Plugin-android.application-3DDC84?style=for-the-badge&logo=android&logoColor=white" />
+<img src="https://img.shields.io/badge/Java-11-007396?style=for-the-badge&logo=openjdk&logoColor=white" />
 
 <!-- MQTT (Eclipse Paho) -->
 <img src="https://img.shields.io/badge/MQTT-Eclipse_Paho_v1.2.5-2C2255?style=for-the-badge&logo=eclipseide&logoColor=white" />
