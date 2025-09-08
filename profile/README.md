@@ -8,22 +8,22 @@
 </p>
 
 <p align="center">
-<!-- Android Studio 버전 -->
-<img src="https://img.shields.io/badge/Android_Studio-Koala_(2024.1.1_Patch_1)-3DDC84?style=for-the-badge&logo=androidstudio&logoColor=white" />
+<!-- Android Studio -->
+<img src="https://img.shields.io/badge/Android_Studio-Koala_(2024.1.1_Patch_1)-3DDC84?logo=androidstudio&logoColor=white" />
 
 <!-- Android 버전 -->
-<img src="https://img.shields.io/badge/Android-≤_12_(API_32)-3DDC84?style=for-the-badge&logo=android&logoColor=white" />
-
-
+<img src="https://img.shields.io/badge/Android-≤_12_(API_32)-3DDC84?logo=android&logoColor=white" />
 
 <!-- Raspberry Pi -->
-<img src="https://img.shields.io/badge/Raspberry_Pi-Device-A22846?style=for-the-badge&logo=raspberrypi&logoColor=white" />
+<img src="https://img.shields.io/badge/Raspberry_Pi-Device-A22846?logo=raspberrypi&logoColor=white" />
+
+<br> <!-- 줄바꿈 -->
 
 <!-- Java version -->
-<img src="https://img.shields.io/badge/Java-11-007396?style=for-the-badge&logo=openjdk&logoColor=white" />
+<img src="https://img.shields.io/badge/Java-11-007396?logo=openjdk&logoColor=white" />
 
 <!-- MQTT (Eclipse Paho) -->
-<img src="https://img.shields.io/badge/MQTT-Eclipse_Paho_v1.2.5-2C2255?style=for-the-badge&logo=eclipseide&logoColor=white" />
+<img src="https://img.shields.io/badge/MQTT-Eclipse_Paho_v1.2.5-2C2255?logo=eclipseide&logoColor=white" />
 
 </p>
 
