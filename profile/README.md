@@ -4,17 +4,24 @@
 </p>
 
 <p align="center">
-  <b>Validate and integrate physical security platforms and systems with a unified tool.</b>
+  <b>Validate and integrate MQTT messaging services and brokers with a unified tool.</b>
 </p>
 
 <p align="center">
-  <!-- Python 버전 -->
-  <img src="https://img.shields.io/badge/python-3.9%20-blue" />
-  
-  <!-- Custom 기능 배지 -->
-  <img src="https://img.shields.io/badge/Webhook-supported-brightgreen" />
-  <img src="https://img.shields.io/badge/PyIn-ready-orange" />
-  <img src="https://img.shields.io/badge/GUI-PyQt5-ff69b4" />
+<!-- Android Studio 버전 -->
+<img src="https://img.shields.io/badge/Android_Studio-Koala_(2024.1.1_Patch_1)-brightgreen" />
+
+<!-- Android 버전 -->
+<img src="https://img.shields.io/badge/Android-≤_12_(API_32)-blue" />
+
+<!-- Raspberry Pi -->
+<img src="https://img.shields.io/badge/Device-Raspberry_Pi_(Android_OS)-red" />
+
+<!-- Network -->
+<img src="https://img.shields.io/badge/Network-Router_Connected-lightgrey" />
+
+<!-- 보조 도구 scrcpy -->
+<img src="https://img.shields.io/badge/Tool-scrcpy_(Screen_Mirroring)-yellow" />
 </p>
 
 ### Highlights
