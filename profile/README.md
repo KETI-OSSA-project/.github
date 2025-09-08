@@ -9,19 +9,36 @@
 
 <p align="center">
 <!-- Android Studio 버전 -->
-<img src="https://img.shields.io/badge/Android_Studio-Koala_(2024.1.1_Patch_1)-brightgreen" />
+<img src="https://img.shields.io/badge/Android_Studio-Koala_(2024.1.1_Patch_1)-brightgreen?style=for-the-badge&logo=androidstudio&logoColor=white" />
 
 <!-- Android 버전 -->
-<img src="https://img.shields.io/badge/Android-≤_12_(API_32)-blue" />
+<img src="https://img.shields.io/badge/Android-≤_12_(API_32)-blue?style=for-the-badge&logo=android&logoColor=white" />
 
 <!-- Raspberry Pi -->
-<img src="https://img.shields.io/badge/Device-Raspberry_Pi_(Android_OS)-red" />
+<img src="https://img.shields.io/badge/Raspberry_Pi-Device-A22846?style=for-the-badge&logo=raspberrypi&logoColor=white" />
 
-<!-- Network -->
-<img src="https://img.shields.io/badge/Network-Router_Connected-lightgrey" />
+<!-- Android SDK -->
+<img src="https://img.shields.io/badge/compileSdk-36-3DDC84?style=for-the-badge&logo=android&logoColor=white" />
+<img src="https://img.shields.io/badge/targetSdk-36-3DDC84?style=for-the-badge&logo=android&logoColor=white" />
+<img src="https://img.shields.io/badge/minSdk-24-3DDC84?style=for-the-badge&logo=android&logoColor=white" />
 
-<!-- 보조 도구 scrcpy -->
-<img src="https://img.shields.io/badge/Tool-scrcpy_(Screen_Mirroring)-yellow" />
+<!-- Java version -->
+<img src="https://img.shields.io/badge/Java-11-007396?style=for-the-badge&logo=java&logoColor=white" />
+
+<!-- Gradle / Android Gradle Plugin -->
+<img src="https://img.shields.io/badge/Build-Gradle-02303A?style=for-the-badge&logo=gradle&logoColor=white" />
+<img src="https://img.shields.io/badge/Plugin-android.application-3DDC84?style=for-the-badge&logo=android&logoColor=white" />
+
+<!-- Features -->
+<img src="https://img.shields.io/badge/Feature-Data_Binding-2962FF?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Feature-AIDL_enabled-2962FF?style=for-the-badge" />
+
+<!-- MQTT (Eclipse Paho) -->
+<img src="https://img.shields.io/badge/MQTT-Eclipse_Paho_v1.2.5-2C2255?style=for-the-badge&logo=eclipseide&logoColor=white" />
+
+<!-- AndroidX (선택적으로 표시) -->
+<img src="https://img.shields.io/badge/AndroidX-AppCompat%20%7C%20Material%20%7C%20Activity%20%7C%20ConstraintLayout-4285F4?style=for-the-badge&logo=android&logoColor=white" />
+
 </p>
 
 ### Highlights
