@@ -17,11 +17,6 @@
 <!-- Raspberry Pi -->
 <img src="https://img.shields.io/badge/Raspberry_Pi-Device-A22846?style=for-the-badge&logo=raspberrypi&logoColor=white" />
 
-<!-- Android SDK -->
-<img src="https://img.shields.io/badge/compileSdk-36-3DDC84?style=for-the-badge&logo=android&logoColor=white" />
-<img src="https://img.shields.io/badge/targetSdk-36-3DDC84?style=for-the-badge&logo=android&logoColor=white" />
-<img src="https://img.shields.io/badge/minSdk-24-3DDC84?style=for-the-badge&logo=android&logoColor=white" />
-
 <!-- Java version -->
 <img src="https://img.shields.io/badge/Java-11-007396?style=for-the-badge&logo=openjdk&logoColor=white" />
 
