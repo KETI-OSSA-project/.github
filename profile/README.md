@@ -9,10 +9,10 @@
 
 <p align="center">
 <!-- Android Studio 버전 -->
-<img src="https://img.shields.io/badge/Android_Studio-Koala_(2024.1.1_Patch_1)-brightgreen?style=for-the-badge&logo=androidstudio&logoColor=white" />
+<img src="https://img.shields.io/badge/Android_Studio-Koala_(2024.1.1_Patch_1)-3DDC84?style=for-the-badge&logo=androidstudio&logoColor=white" />
 
 <!-- Android 버전 -->
-<img src="https://img.shields.io/badge/Android-≤_12_(API_32)-blue?style=for-the-badge&logo=android&logoColor=white" />
+<img src="https://img.shields.io/badge/Android-≤_12_(API_32)-3DDC84?style=for-the-badge&logo=android&logoColor=white" />
 
 <!-- Raspberry Pi -->
 <img src="https://img.shields.io/badge/Raspberry_Pi-Device-A22846?style=for-the-badge&logo=raspberrypi&logoColor=white" />
