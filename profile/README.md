@@ -12,7 +12,7 @@
 <img src="https://img.shields.io/badge/Android_Studio-Koala_(2024.1.1_Patch_1)-3DDC84?logo=androidstudio&logoColor=white" />
 
 <!-- Android 버전 -->
-<img src="https://img.shields.io/badge/Android-≤_12_(API_32)-3DDC84?logo=android&logoColor=white" />
+<img src="https://img.shields.io/badge/Android-12_(API_32)-3DDC84?logo=android&logoColor=white" />
 
 <!-- Raspberry Pi -->
 <img src="https://img.shields.io/badge/Raspberry_Pi-Device-A22846?logo=raspberrypi&logoColor=white" />
