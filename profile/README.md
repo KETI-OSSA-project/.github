@@ -8,24 +8,18 @@
 </p>
 
 <p align="center">
-<!-- Android Studio -->
-<img src="https://img.shields.io/badge/Android_Studio-Koala_(2024.1.1_Patch_1)-3DDC84?logo=androidstudio&logoColor=white" />
+  <!-- 윗줄: Android 관련 2개 -->
+  <img src="https://img.shields.io/badge/Android_Studio-Koala_(2024.1.1_Patch_1)-3DDC84?logo=androidstudio&logoColor=white" />
+  <img src="https://img.shields.io/badge/Android-12_(API_32)-3DDC84?logo=android&logoColor=white" />
 
-<!-- Android 버전 -->
-<img src="https://img.shields.io/badge/Android-12_(API_32)-3DDC84?logo=android&logoColor=white" />
+  <br> <!-- 줄바꿈 -->
 
-<!-- Raspberry Pi -->
-<img src="https://img.shields.io/badge/Raspberry_Pi-Device-A22846?logo=raspberrypi&logoColor=white" />
-
-<br> <!-- 줄바꿈 -->
-
-<!-- Java version -->
-<img src="https://img.shields.io/badge/Java-11-007396?logo=openjdk&logoColor=white" />
-
-<!-- MQTT (Eclipse Paho) -->
-<img src="https://img.shields.io/badge/MQTT-Eclipse_Paho_v1.2.5-2C2255?logo=eclipseide&logoColor=white" />
-
+  <!-- 아랫줄: 나머지 3개 -->
+  <img src="https://img.shields.io/badge/Raspberry_Pi-Device-A22846?logo=raspberrypi&logoColor=white" />
+  <img src="https://img.shields.io/badge/Java-11-007396?logo=openjdk&logoColor=white" />
+  <img src="https://img.shields.io/badge/MQTT-Eclipse_Paho_v1.2.5-2C2255?logo=eclipseide&logoColor=white" />
 </p>
+
 
 ### Highlights
 - **내부 ↔ 외부 MQTT 브로커 연동** (Mosquitto 지원)  
