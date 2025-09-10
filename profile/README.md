@@ -41,7 +41,7 @@
 </table>
 <p align="center">
   <a href="https://drive.google.com/file/d/1_TukQ0CwD708QUjqD8ZCfM2t8XZdoEBp/view?usp=drive_link">
-    <b>MQTT Demo Video</b>
+    <b>📽️ MQTT Demo</b>
   </a>
 </p>
 
