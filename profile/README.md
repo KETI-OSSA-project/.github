@@ -39,7 +39,12 @@
     <td><img src="https://github.com/user-attachments/assets/e029e60a-968f-4e0d-9743-4cc5d612e071" alt="downlink-subscriber"></td>
 </tr>
 </table>
-**Video Link:** [MQTT Demo](https://drive.google.com/file/d/1_TukQ0CwD708QUjqD8ZCfM2t8XZdoEBp/view?usp=drive_link)
+<p align="center">
+  <a href="https://drive.google.com/file/d/1_TukQ0CwD708QUjqD8ZCfM2t8XZdoEBp/view?usp=drive_link">
+    <b>MQTT Demo Video</b>
+  </a>
+</p>
+
 ---
 
 ## Getting Started
