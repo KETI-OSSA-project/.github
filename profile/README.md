@@ -20,14 +20,13 @@
 
 
 ### Highlights
-- **내부 ↔ 외부 MQTT 브로커 연동** (Mosquitto 지원)  
+- **공식 azena MQTT 표준 문법 기반 서비스 제공**
 - **안드로이드 기반 독립 실행형 메시징 허브** (Broker, Publisher, Subscriber 포함)  
-- **Gateway를 통한 uplink/downlink 토픽 패턴 관리**  
-- **라즈베리파이 + 안드로이드 환경에서 검증 완료**  
+- **내부 ↔ 외부 MQTT 브로커 연동** (Mosquitto 지원)  
+- **Gateway를 통한 외부 통신용 uplink/downlink 토픽 패턴 관리**  
 ---
 
-## Architecture
-
+## Demo
 ### 내부 ↔ 내부 통신
 <p align="center">
   <img src="https://github.com/user-attachments/assets/5fda5904-9d37-4324-8dae-87ddd36bc08a" width="40%" />
@@ -40,11 +39,7 @@
     <td><img src="https://github.com/user-attachments/assets/e029e60a-968f-4e0d-9743-4cc5d612e071" alt="downlink-subscriber"></td>
 </tr>
 </table>
-
-- **내부 Publisher/Subscriber** : 내부 브로커를 통한 메시지 발행·수신  
-- **내부 Broker** : 내부 메시징 허브, 구독/발행 관리  
-- **Gateway** : 내부 Broker ↔ 외부 MQTT Broker 중계 (uplink/downlink 토픽 기반)  
-- **외부 MQTT Broker (Mosquitto)** : 외부 Pub/Sub 클라이언트와 통신  
+Video Link | [MQTT](https://drive.google.com/file/d/1_TukQ0CwD708QUjqD8ZCfM2t8XZdoEBp/view?usp=drive_link)
 ---
 
 ## Getting Started
@@ -53,7 +48,7 @@
 개발 환경 준비:
 - **Android Studio Koala (2024.1.1 Patch 1)**  
 - Android 버전 **12 이하 (SDK/API Level ≤ 32)**  
-- **라즈베리파이 (Android OS)** + 공유기 연결  
+- 안드로이드 디바이스: **라즈베리파이 (Android OS)** + 공유기 연결  
 - 보조 도구: [scrcpy](https://goharry.tistory.com/39) (안드로이드 화면 미러링)  
 
 ---
