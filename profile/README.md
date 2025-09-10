@@ -50,40 +50,29 @@
 ## Getting Started
 
 ### Setup
-개발 환경 준비:
 - **Android Studio Koala (2024.1.1 Patch 1)**  
 - Android 버전 **12 이하 (SDK/API Level ≤ 32)**  
 - 안드로이드 디바이스: **라즈베리파이 (Android OS)** + 공유기 연결  
-- 보조 도구: [scrcpy](https://goharry.tistory.com/39) (안드로이드 화면 미러링)  
+- 보조 도구: [scrcpy](https://goharry.tistory.com/39) (안드로이드 화면 미러링)
 
 ---
 
-1. **내부 Broker 실행**
-   
+### Running
+1. **[실행 문서 참고](https://docs.google.com/document/d/1I74fBEl-GEGYGJwbT1mKgXR2QVihajx3eY7xqVxtmNs/edit?tab=t.0)**  
+
+2. **[외부 브로커 실행 (mosquitto)](https://docs.google.com/document/d/1L3uAyofZ-PSXeE4_AYlj9fvegXYk_N6T/edit)**
+- publish
    ```bash
-   ./broker_start.sh
+  mosquitto_pub -h localhost -p 1883 -t "downlink/app/+/in" -m "Hello from Mosquitto"
    ```
 
-3. **Publisher 실행**
-
+- subscribe
    ```bash
-   ./publisher_start.sh --topic test/topic --message "hello world"
+   mosquitto_sub -h localhost -p 1883 -t “uplink/app/+/out”
    ```
-
-4. **Subscriber 실행**
-
-   ```bash
-   ./subscriber_start.sh --topic test/topic
-   ```
-
-5. **Gateway 실행 (내부 ↔ 외부 브로커 연동)**
-
-   ```bash
-   ./gateway_start.sh --uplink "uplink/#" --downlink "downlink/#"
-   ```
-
 ---
 
+## Corresponding Author 
 **개발 및 유지 관리 기관** : 한국전자기술연구원(KETI)
 
 ※ 본 연구는 2025년도 정부(과학기술정보통신부)의 재원으로 정보통신기획평가원의 지원을 받아 수행된 연구임(No. RS-2024-00394190, 온-디바이스 자율보호가 내재화된 개방형 영상보안플랫폼 기술 개발).
