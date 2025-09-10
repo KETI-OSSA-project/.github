@@ -19,7 +19,7 @@
 </div>
 
 
-### Highlights
+## Highlights
 
 - **공식 azena MQTT 표준 문법 기반 서비스 제공**  
   azena 플랫폼에서 정의한 공식 Android MQTT 서비스 문법을 기반으로, 표준화된 방식으로 메시징 기능을 제공합니다.  
