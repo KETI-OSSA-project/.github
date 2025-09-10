@@ -13,7 +13,6 @@
   <img src="https://img.shields.io/badge/Android_Studio-Koala-3DDC84?logo=androidstudio&logoColor=white" />
   <img src="https://img.shields.io/badge/Android-12_(API_32)-3DDC84?logo=android&logoColor=white" />
   <!-- 아랫줄: 나머지 3개 -->
-  <img src="https://img.shields.io/badge/Raspberry_Pi-Android_OS-A22846?logo=raspberrypi&logoColor=white" />
   <img src="https://img.shields.io/badge/Java-11-007396?logo=openjdk&logoColor=white" />
   <img src="https://img.shields.io/badge/Mosquitto-2.0.22-3C5280?logo=eclipseide&logoColor=white" />
 
