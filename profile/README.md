@@ -8,7 +8,9 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Award-2025_IEMEK_Excellent_Paper-FFD700?style=for-the-badge&logo=trophy&logoColor=black" alt="Award Badge" />
+  <a href="https://iemek.org/Conference/ConferenceView.asp?top_param=4&sub_param=1&AC=0&CODE=CC20250901&CpPage=665#CONF">
+    <img src="https://img.shields.io/badge/Award-2025_IEMEK_Excellent_Paper-FFD700?style=for-the-badge&logo=trophy&logoColor=black" alt="Award Badge" />
+  </a>
 </p>
 
 <div align="center">
