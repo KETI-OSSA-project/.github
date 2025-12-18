@@ -7,27 +7,11 @@
   <b>Validate and integrate MQTT messaging services and brokers with a unified tool.</b>
 </p>
 
-<br>
 <p align="center">
-<a href="https://iemek.org/Conference/ConferenceView.asp?top_param=4&sub_param=1&AC=0&CODE=CC20250901&CpPage=665#CONF" target="_blank">
-  <table>
-    <tr>
-      <td align="center" width="600px" bgcolor="#FFFBE6" style="border: 3px solid #FFD700; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-        <br>
-        <h2 style="color: #B8860B; margin-bottom: 10px;">🏆 2025 IEMEK Best Presentation Award 🏆</h2>
-        <p style="font-size: 1.1em; font-weight: bold; color: #333;">
-          대한임베디드공학회 추계학술대회 우수논문발표상 수상작
-        </p>
-        <p style="font-size: 0.9em; color: #666;">
-          (클릭하여 학회 정보 확인)
-        </p>
-        <br>
-      </td>
-    </tr>
-  </table>
-</a>
+  <a href="https://iemek.org/Conference/ConferenceView.asp?top_param=4&sub_param=1&AC=0&CODE=CC20250901&CpPage=665#CONF">
+    <img src="https://img.shields.io/badge/🏆_2025_IEMEK-Best_Presentation_Award-FFD700?style=for-the-badge&labelColor=000000&logoWidth=30" height="40"/>
+  </a>
 </p>
-<br>>
 
 <div align="center">
 
