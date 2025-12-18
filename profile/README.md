@@ -5,6 +5,7 @@
 
 <p align="center">
   <b>Validate and integrate MQTT messaging services and brokers with a unified tool.</b>
+  <img src="https://img.shields.io/badge/Award-2025_IEMEK_Excellent_Paper-FFD700?style=for-the-badge&logo=trophy&logoColor=black" alt="Award Badge" />
 </p>
 
 <div align="center">
