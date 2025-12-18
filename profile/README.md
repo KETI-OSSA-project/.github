@@ -7,12 +7,6 @@
   <b>Validate and integrate MQTT messaging services and brokers with a unified tool.</b>
 </p>
 
-<p align="center">
-  <a href="https://iemek.org/Conference/ConferenceView.asp?top_param=4&sub_param=1&AC=0&CODE=CC20250901&CpPage=665#CONF">
-    <img src="https://img.shields.io/badge/🏆_2025_IEMEK-Best_Presentation_Award-FFD700?style=for-the-badge&labelColor=000000&logoWidth=30" height="40"/>
-  </a>
-</p>
-
 <div align="center">
 
   <!-- 윗줄: Android 관련 2개 -->
@@ -23,6 +17,13 @@
   <img src="https://img.shields.io/badge/Mosquitto-2.0.22-3C5280?logo=eclipseide&logoColor=white" />
 
 </div>
+
+<p align="center">
+  <a href="https://iemek.org/Conference/ConferenceView.asp?top_param=4&sub_param=1&AC=0&CODE=CC20250901&CpPage=665#CONF">
+    <img src="https://img.shields.io/badge/🏆_2025_IEMEK-Best_Presentation_Award-FFD700?style=for-the-badge&labelColor=000000&logoWidth=30" height="40"/>
+  </a>
+</p>
+
 
 
 ## Highlights
