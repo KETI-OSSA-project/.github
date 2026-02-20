@@ -82,8 +82,7 @@
    ```bash
    mosquitto_sub -h localhost -p 1883 -t “uplink/app/+/out”
    ```
----
-
+   
 ## Acknowledgement
 **개발 및 유지 관리 기관** : 한국전자기술연구원(KETI)
 
